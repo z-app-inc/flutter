@@ -626,7 +626,7 @@ class _PopupMenu<T> extends StatelessWidget {
         maxWidth: _kMenuMaxWidth,
       ),
       child: IntrinsicWidth(
-        stepWidth: _kMenuWidthStep,
+        // stepWidth: _kMenuWidthStep,
         child: Semantics(
           scopesRoute: true,
           namesRoute: true,
