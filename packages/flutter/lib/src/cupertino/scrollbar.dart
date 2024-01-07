@@ -81,6 +81,7 @@ class CupertinoScrollbar extends RawScrollbar {
     this.radiusWhileDragging = defaultRadiusWhileDragging,
     ScrollNotificationPredicate? notificationPredicate,
     super.scrollbarOrientation,
+    this.padding = EdgeInsets.zero,
   }) : assert(thickness < double.infinity),
        assert(thicknessWhileDragging < double.infinity),
        super(
@@ -120,6 +121,8 @@ class CupertinoScrollbar extends RawScrollbar {
   /// dragging the scrollbar.
   final Radius radiusWhileDragging;
 
+  final EdgeInsets padding;
+
   @override
   RawScrollbarState<CupertinoScrollbar> createState() => _CupertinoScrollbarState();
 }
@@ -156,7 +159,7 @@ class _CupertinoScrollbarState extends RawScrollbarState<CupertinoScrollbar> {
       ..mainAxisMargin = _kScrollbarMainAxisMargin
       ..crossAxisMargin = _kScrollbarCrossAxisMargin
       ..radius = _radius
-      ..padding = MediaQuery.paddingOf(context)
+      ..padding = widget.padding + MediaQuery.paddingOf(context)
       ..minLength = _kScrollbarMinLength
       ..minOverscrollLength = _kScrollbarMinOverscrollLength
       ..scrollbarOrientation = widget.scrollbarOrientation;
