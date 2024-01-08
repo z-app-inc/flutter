@@ -25,7 +25,7 @@ const Color _kScrollbarColor = CupertinoDynamicColor.withBrightness(
 // to the top.
 // TODO(LongCatIsLooong): fix https://github.com/flutter/flutter/issues/32175
 const double _kScrollbarMainAxisMargin = 3.0;
-const double _kScrollbarCrossAxisMargin = 3.0;
+const double _kScrollbarCrossAxisMargin = 2.5;
 
 /// An iOS style scrollbar.
 ///
